@@ -6,7 +6,7 @@
 
 	--border-radius: 5%;
 
-	--nav-width: 90px;
+	--nav-width: 200px;
 }
 
 ::-webkit-scrollbar {
@@ -31,6 +31,7 @@ html {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -45,20 +46,13 @@ h3 {
 	font-size: 28px;
 }
 
-h4 {
-	font-size: 24px;
-}
-
-h5 {
-	font-size: 20px;
-}
-
-h6 {
-	font-size: 16px;
-}
-
 a {
 	text-decoration: none;
+	color: var(--colour-primary);
+}
+
+a:hover {
+	color: var(--colour-accent);
 }
 
 li {
@@ -67,12 +61,16 @@ li {
 
 form {
 	display: flex;
-	width: 70%;
+	width: 65%;
 	flex-direction: column;
 	margin: 4% 0;
-	padding: 1%;
+	padding: 2%;
 	background: var(--colour-primary);
 	color: var(--colour-secondary);
+}
+
+p {
+	overflow: hidden;
 }
 
 .center {
@@ -99,11 +97,37 @@ form {
 	border: red solid 1px;
 	background: var(--colour-secondary);
 	margin-left: var(--nav-width);
+	flex-direction: column;
 }
 
 .card {
-	width: 50px;
-	height: 50px;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.card:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	font-size: 2em;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .3s ease;
+	background: var(--colour-primary);
+}
+
+.overlay a {
+	color: var(--colour-accent);
+	flex-direction: column;
 }
 
 .form-element {
@@ -113,10 +137,15 @@ form {
 	width: 100%;
 }
 
-form input {
-	width: 75%;
-	height: 30px;
+.form-input {
 	margin: 1% 0;
+	width: 75%;
+	overflow: hidden;
+	resize: vertical;
+}
+
+input {
+	height: 30px;
 }
 
 form input[type=submit] {
@@ -125,20 +154,23 @@ form input[type=submit] {
 	background: var(--colour-accent);
 }
 
-form textarea {
-	width: 75%;
+textarea {
 	height: 150px;
-	overflow: hidden;
-	resize: vertical;
-	margin: 1% 0;
 }
 
-#home {
-	flex-direction: column;
-	height: 20vh;
+.socials {
+	width: 100%;
 }
 
-#nav {
+.socials a {
+	font-size: 40px;
+}
+
+.socials li {
+	margin: 1%;
+}
+
+.nav {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -147,23 +179,66 @@ form textarea {
 	flex-direction: column;
 	background: var(--colour-primary);
 	font-size: 1.4em;
+}
+
+.nav a {
+	position: relative;
+	width: 100%;
 	color: var(--colour-secondary);
-}
-
-#nav li {
-	margin: 5px 0;
-}
-
-#nav a {
-	display: none;
-}
-
-#nav li:hover i {
-	display: none;
-}
-
-#nav li:hover a {
 	display: flex;
+	align-items: center;
+	margin: 5% 0;
+}
+
+.nav i {
+	width: 35%;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.nav p {
 	font-size: 0.8em;
+	width: 65%;
+	padding-left: 10%;
+}
+
+.nav a:hover {
 	color: var(--colour-accent);
+}
+
+#home {
+	flex-direction: column;
+	height: 20vh;
+}
+
+@media screen and (max-width: 600px) {
+	:root {
+		--nav-width: 70px;
+	}
+
+	.nav p {
+		position: absolute;
+		padding: 0;
+		font-size: 1em;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		color: var(--colour-accent);
+		z-index: 100;
+	}
+
+	.nav a:hover .nav p {
+		opacity: 1;
+	}
+
+	.nav i {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 900px) {
 }
