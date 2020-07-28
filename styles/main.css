@@ -1,0 +1,169 @@
+:root {
+	--colour-primary: #282828;
+	--colour-secondary: #6e6e6e;
+	--colour-tertiary: #ffffff;
+	--colour-accent: #008b8b;
+
+	--border-radius: 5%;
+
+	--nav-width: 90px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--colour-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--colour-primary);
+}
+
+html {
+	scroll-behavior: smooth;
+	background: var(--colour-secondary);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+h1 {
+	font-size: 56px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+form {
+	display: flex;
+	width: 70%;
+	flex-direction: column;
+	margin: 4% 0;
+	padding: 1%;
+	background: var(--colour-primary);
+	color: var(--colour-secondary);
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fill {
+	height: 100%;
+	width: 100%;
+}
+
+.rounded-border {
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+}
+
+.section {
+	color: var(--colour-primary);
+	width: 100vw - var(--nav-width);
+	border: red solid 1px;
+	background: var(--colour-secondary);
+	margin-left: var(--nav-width);
+}
+
+.card {
+	width: 50px;
+	height: 50px;
+}
+
+.form-element {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+form input {
+	width: 75%;
+	height: 30px;
+	margin: 1% 0;
+}
+
+form input[type=submit] {
+	width: 100%;
+	color: var(--colour-primary);
+	background: var(--colour-accent);
+}
+
+form textarea {
+	width: 75%;
+	height: 150px;
+	overflow: hidden;
+	resize: vertical;
+	margin: 1% 0;
+}
+
+#home {
+	flex-direction: column;
+	height: 20vh;
+}
+
+#nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: var(--nav-width);
+	flex-direction: column;
+	background: var(--colour-primary);
+	font-size: 1.4em;
+	color: var(--colour-secondary);
+}
+
+#nav li {
+	margin: 5px 0;
+}
+
+#nav a {
+	display: none;
+}
+
+#nav li:hover i {
+	display: none;
+}
+
+#nav li:hover a {
+	display: flex;
+	font-size: 0.8em;
+	color: var(--colour-accent);
+}
