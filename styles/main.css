@@ -7,6 +7,7 @@
 	--border-radius: 5%;
 
 	--nav-width: 200px;
+	--nav-height: 60px;
 }
 
 ::-webkit-scrollbar {
@@ -96,7 +97,7 @@ p {
 	width: 100vw - var(--nav-width);
 	border: red solid 1px;
 	background: var(--colour-secondary);
-	margin-left: var(--nav-width);
+	margin-right: var(--nav-width);
 	flex-direction: column;
 }
 
@@ -113,7 +114,7 @@ p {
 
 .overlay {
 	position: absolute;
-	font-size: 2em;
+	font-size: 1.6em;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -173,7 +174,7 @@ textarea {
 .nav {
 	position: fixed;
 	top: 0;
-	left: 0;
+	right: 0;
 	height: 100%;
 	width: var(--nav-width);
 	flex-direction: column;
@@ -187,18 +188,18 @@ textarea {
 	color: var(--colour-secondary);
 	display: flex;
 	align-items: center;
-	margin: 5% 0;
+	margin: 10% 0;
 }
 
 .nav i {
-	width: 35%;
+	width: 50%;
 	font-size: 1.2em;
 	text-align: center;
 }
 
 .nav p {
 	font-size: 0.8em;
-	width: 65%;
+	width: 50%;
 	padding-left: 10%;
 }
 
@@ -211,15 +212,15 @@ textarea {
 	height: 20vh;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	:root {
-		--nav-width: 70px;
+		--nav-width: 80px;
 	}
 
 	.nav p {
 		position: absolute;
 		padding: 0;
-		font-size: 1em;
+		font-size: 0.7em;
 		top: 0;
 		bottom: 0;
 		left: 0;
@@ -229,10 +230,17 @@ textarea {
 		opacity: 0;
 		color: var(--colour-accent);
 		z-index: 100;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.nav a:hover .nav p {
+	.nav a:hover p {
 		opacity: 1;
+	}
+
+	.nav a:hover i {
+		opacity: 0;
 	}
 
 	.nav i {
@@ -240,5 +248,30 @@ textarea {
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 550px) {
+	.nav {
+		flex-direction: row;
+		position: fixed;
+		top: auto;
+		bottom: 0;
+		width: 100%;
+		height: var(--nav-height);
+	}
+
+	.nav a {
+		margin: 0;
+		width: 25%;
+	}
+
+	.section {
+		width: 100%;
+	}
+
+	form {
+		width: 95%;
+	}
+
+	#footer {
+		margin-bottom: var(--nav-height);
+	}
 }
