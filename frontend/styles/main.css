@@ -95,7 +95,6 @@ li {
 
 .overlay {
 	position: absolute;
-	font-size: 1.6em;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -107,9 +106,13 @@ li {
 	background: var(--colour-primary);
 }
 
-.overlay a {
-	font-size: 3rem;
-	padding: 5%;
+.overlay > a {
+	font-size: 4rem;
+	margin: 0 10%;
+	color: white;
+}
+
+.overlay > a:hover {
 	color: var(--colour-accent);
 }
 
@@ -160,7 +163,7 @@ li {
 .window {
 	min-height: 95vh;
 	width: 100vw;
-	padding: 5%;
+	padding: 0 5%;
 	margin-bottom: 5%;
 }
 
