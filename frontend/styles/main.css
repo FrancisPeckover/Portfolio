@@ -56,6 +56,13 @@ li {
 	justify-content: center;
 }
 
+.column {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
 .justify-end {
 	display: flex;
 	align-items: center;
@@ -69,9 +76,17 @@ li {
 
 .card {
 	position: relative;
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 400px;
 	overflow: hidden;
+	margin: 5%;
+	box-shadow: 2px 4px 2px 4px black;
+	animation: grow 1000ms forwards;
+}
+
+.card > img {
+	height: 100%;
+	object-fit: cover;
 }
 
 .card:hover .overlay {
@@ -93,8 +108,20 @@ li {
 }
 
 .overlay a {
+	font-size: 3rem;
+	padding: 5%;
 	color: var(--colour-accent);
-	flex-direction: column;
+}
+
+.header {
+	height: 5vh;
+	width: 100vw;
+	overflow: hidden;
+	top: 0;
+	z-index: 10;
+	font-size: 1.4rem;
+	position: fixed;
+	display: none;
 }
 
 .nav {
@@ -134,21 +161,13 @@ li {
 	min-height: 95vh;
 	width: 100vw;
 	padding: 5%;
-	border: red 1px solid;
 	margin-bottom: 5%;
-}
-
-#home {
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 1fr 2fr 1fr;
-	grid-template-areas: ". . girl" ". logo ." "boy . .";
 }
 
 .logo {
 	border-radius: 50%;
 	object-fit: cover;
-	height: 200%;
+	max-width: 90vw;
 	align-self: center;
 	justify-self: center;
 }
@@ -158,7 +177,8 @@ li {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	grid-template-areas: "girlText boy" "girl boyText";
+	column-gap: 1%;
+	grid-template-areas: "femaleText maleImg" "femaleImg maleText";
 }
 
 #about > p:nth-child(1) {
@@ -172,14 +192,98 @@ li {
 .avatar {
 	border-radius: 50%;
 	object-fit: cover;
-	height: 120%;
+	max-width: 90vw;
 	align-self: center;
 	justify-self: center;
-	animation: fadeIn forwards 2000ms;
+	animation: fadeIn forwards 4000ms;
 }
 
 .about-text {
-	padding: 20%;
+	padding: 10%;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.contact-form {
+	width: 50vw;
+	max-width: 90vw;
+}
+
+.form-element {
+	width: 100%;
+	resize: vertical;
+	border: none;
+	border-bottom: 1px solid black;
+	margin-bottom: 2vh;
+}
+
+.contact-form > button {
+	width: 100%;
+}
+
+.form-element:focus {
+	outline: none;
+}
+
+#footer {
+	min-height: 25vh;
+}
+
+@media screen and (max-width: 1024px) {
+	#projects {
+		flex-direction: column;
+	}
+
+	.logo {
+		height: auto;
+		max-width: 90vw;
+		object-fit: cover;
+	}
+
+	#about {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "maleImg" "maleText" "femaleImg" "femaleText";
+	}
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 992px) {
+	.nav {
+		top: auto;
+		bottom: 0;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background: var(--colour-secondary);
+	}
+
+	.nav-link {
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav-link > p {
+		display: none;
+	}
+
+	.avatar {
+		max-width: 90vw;
+	}
+
+	.about-text {
+		padding: 5%;
+	}
+
+	.card {
+		max-width: 90vw;
+	}
+
+	.header {
+		display: block;
+	}
 }
 
 @keyframes fadeIn {
@@ -219,6 +323,16 @@ li {
 
 	50% {
 		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform: scale(0.5);
 	}
 
 	100% {
