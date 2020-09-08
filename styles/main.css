@@ -3,11 +3,6 @@
 	--colour-secondary: #6e6e6e;
 	--colour-tertiary: #ffffff;
 	--colour-accent: #008b8b;
-
-	--border-radius: 5%;
-
-	--nav-width: 200px;
-	--nav-height: 60px;
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +19,6 @@
 
 html {
 	scroll-behavior: smooth;
-	background: var(--colour-secondary);
 }
 
 * {
@@ -52,26 +46,8 @@ a {
 	color: var(--colour-primary);
 }
 
-a:hover {
-	color: var(--colour-accent);
-}
-
 li {
 	list-style-type: none;
-}
-
-form {
-	display: flex;
-	width: 65%;
-	flex-direction: column;
-	margin: 4% 0;
-	padding: 2%;
-	background: var(--colour-primary);
-	color: var(--colour-secondary);
-}
-
-p {
-	overflow: hidden;
 }
 
 .center {
@@ -80,25 +56,15 @@ p {
 	justify-content: center;
 }
 
+.justify-end {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
 .fill {
 	height: 100%;
 	width: 100%;
-}
-
-.rounded-border {
-	border-top-left-radius: var(--border-radius);
-	border-top-right-radius: var(--border-radius);
-	border-bottom-left-radius: var(--border-radius);
-	border-bottom-right-radius: var(--border-radius);
-}
-
-.section {
-	color: var(--colour-primary);
-	width: 100vw - var(--nav-width);
-	border: red solid 1px;
-	background: var(--colour-secondary);
-	margin-right: var(--nav-width);
-	flex-direction: column;
 }
 
 .card {
@@ -131,147 +97,131 @@ p {
 	flex-direction: column;
 }
 
-.form-element {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-}
-
-.form-input {
-	margin: 1% 0;
-	width: 75%;
-	overflow: hidden;
-	resize: vertical;
-}
-
-input {
-	height: 30px;
-}
-
-form input[type=submit] {
-	width: 100%;
-	color: var(--colour-primary);
-	background: var(--colour-accent);
-}
-
-textarea {
-	height: 150px;
-}
-
-.socials {
-	width: 100%;
-}
-
-.socials a {
-	font-size: 40px;
-}
-
-.socials li {
-	margin: 1%;
-}
-
 .nav {
+	height: 5vh;
+	width: 100vw;
+	overflow: hidden;
+	font-size: 1.2rem;
 	position: fixed;
 	top: 0;
-	right: 0;
-	height: 100%;
-	width: var(--nav-width);
-	flex-direction: column;
-	background: var(--colour-primary);
-	font-size: 1.4em;
+	z-index: 10;
 }
 
-.nav a {
+.nav-link {
+	padding: 0 3rem;
 	position: relative;
-	width: 100%;
-	color: var(--colour-secondary);
-	display: flex;
-	align-items: center;
-	margin: 10% 0;
 }
 
-.nav i {
-	width: 50%;
-	font-size: 1.2em;
-	text-align: center;
+.nav-link::after {
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 1px;
+	transition: width 250ms;
+	content: "";
+	background: black;
 }
 
-.nav p {
-	font-size: 0.8em;
-	width: 50%;
-	padding-left: 10%;
+.nav-link:hover::after {
+	width: 60%;
 }
 
-.nav a:hover {
-	color: var(--colour-accent);
+.nav-link > i {
+	padding: 0 0.5rem;
+}
+
+.window {
+	min-height: 95vh;
+	width: 100vw;
+	padding: 5%;
+	border: red 1px solid;
+	margin-bottom: 5%;
 }
 
 #home {
-	flex-direction: column;
-	height: 20vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-areas: ". . girl" ". logo ." "boy . .";
 }
 
-@media screen and (max-width: 900px) {
-	:root {
-		--nav-width: 80px;
-	}
+.logo {
+	border-radius: 50%;
+	object-fit: cover;
+	height: 200%;
+	align-self: center;
+	justify-self: center;
+}
 
-	.nav p {
-		position: absolute;
-		padding: 0;
-		font-size: 0.7em;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
+#about {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "girlText boy" "girl boyText";
+}
+
+#about > p:nth-child(1) {
+	animation: slideFromLeft 1000ms forwards;
+}
+
+#about > p:nth-child(4) {
+	animation: slideFromRight 1000ms forwards;
+}
+
+.avatar {
+	border-radius: 50%;
+	object-fit: cover;
+	height: 120%;
+	align-self: center;
+	justify-self: center;
+	animation: fadeIn forwards 2000ms;
+}
+
+.about-text {
+	padding: 20%;
+}
+
+@keyframes fadeIn {
+	0% {
 		opacity: 0;
-		color: var(--colour-accent);
-		z-index: 100;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
-	.nav a:hover p {
+	100% {
 		opacity: 1;
 	}
+}
 
-	.nav a:hover i {
-		opacity: 0;
+@keyframes slideFromLeft {
+	0% {
+		transform: translateX(-100%);
 	}
 
-	.nav i {
-		width: 100%;
+	100% {
+		transform: translateX(0);
 	}
 }
 
-@media screen and (max-width: 550px) {
-	.nav {
-		flex-direction: row;
-		position: fixed;
-		top: auto;
-		bottom: 0;
-		width: 100%;
-		height: var(--nav-height);
+@keyframes slideFromRight {
+	0% {
+		transform: translateX(100%);
 	}
 
-	.nav a {
-		margin: 0;
-		width: 25%;
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
 	}
 
-	.section {
-		width: 100%;
+	50% {
+		transform: scale(1.05);
 	}
 
-	form {
-		width: 95%;
-	}
-
-	#footer {
-		margin-bottom: var(--nav-height);
+	100% {
+		transform: scale(1);
 	}
 }

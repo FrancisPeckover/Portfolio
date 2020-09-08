@@ -3,79 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
+        <title>Amalgam</title>
 
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/thumbnails/000/609/930/small/1204-29.jpg">
+        <link rel="shortcut icon" href="../images/brain.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
         <script src="../js/main.js"></script>
     </head>
     
     <body>
-        <ul class="nav center">
-            <a href="#home"><p>Home</p><i class="fa fa-home"></i></a>
-            <a href="#tid-bits"><p>Tid-bits</p><i class="fa fa-code"></i></a>
-            <a href="#projects"><p>Projects</p><i class="fa fa-code-fork"></i></a>
-            <a href="#contact"><p>Contact</p><i class="fa fa-envelope"></i></a>
+        <ul id="nav" class="nav justify-end">
+            <a class="nav-link center" href="#home"><i class="fa fa-home"></i><p>Home</p></a>
+            <a class="nav-link center" href="#about"><i class="fa fa-info"></i><p>About</p></a>
+            <a class="nav-link center" href="#projects"><i class="fa fa-cogs"></i><p>Projects</p></a>
+            <a class="nav-link center" href="#contact"><i class="fa fa-envelope"></i><p>Contact</p></a>
         </ul>
 
-        <div id="home" class="section center">
-            <h1>Hi, I'm SL</h1>
-            <p>This is just a showcase for some of the things I have built</p>
+        <div id="home" class="window center">
+            <img class="logo" style="grid-area: logo;" src="../images/brain.png" alt="logo">
+        </div>
+        
+        <div id="about" class="window center">
+            <p class="animated center about-text fill" style="grid-area: girlText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Harum qui delectus ex perspiciatis veritatis iusto eos maiores eius eveniet recusandae eum rerum quae, sunt vero amet quos dolores neque 
+                suscipit molestias architecto culpa reprehenderit nam! Quibusdam, quod soluta accusamus, nemo voluptate quos atque excepturi obcaecati nobis 
+                quas vel. Iure, totam!
+            </p>
+            <img id='boyImg' class="animated avatar" style="grid-area: boy;" src="../images//brit.png" alt="boy">
+            <img id="girlImg" class="animated avatar" style="grid-area: girl;" src="../images/brit.png" alt="girl">
+            <p class="animated center about-text fill" style="grid-area: boyText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati laborum soluta quia magni 
+                esse, quasi inventore, vitae quo aspernatur provident unde porro. Ab consectetur fugiat, perferendis laudantium vel molestiae aliquam 
+                praesentium quod earum veritatis illum dignissimos suscipit dolore enim tenetur illo exercitationem obcaecati expedita eligendi accusamus 
+                architecto necessitatibus! Perferendis.
+            </p>
         </div>
 
-        <div id="tid-bits" class="section center">
-            <div class="theme-changer">
-                <ul class="center">
-                    <li><button onclick="setTheme('light')"><i style="color: #ccc;" class="fa fa-circle"></i></button></li>
-                    <li><button onclick="setTheme('blue')"><i style="color: blue;" class="fa fa-circle"></i></button></li>
-                    <li><button onclick="setTheme('dark')"><i style="color: #282828;" class="fa fa-circle"></i></button></li>
-                </ul>
-            </div>
+        <div id="projects" class="window center">
+            card thingo
         </div>
 
-        <div id="projects" class="section center">
-            <div class="card">
-                <img class="fill" src="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=1390&crop=1" alt="">
-                <div class="overlay center">
-                    <a class="center" href=""><i class="fa fa-code"></i>View Code</a>
-                </div>
-            </div>
-        </div>
+        <footer id="footer" class="center">
+            <p><i class="center fa fa-copyright"></i> Website by Amalgam 2020. All rights reserved</p>
+        </footer>
 
-        <div id="contact" class="section center">
-            <form class="rounded-border" action="">
-                <div class="form-element">
-                    <label for="name">Name:</label>
-                    <input class="form-input" name="name" type="text" placeholder="Enter Your Name..">
-                </div>
-                <div class="form-element">
-                    <label for="subject">Subject:</label>
-                    <input class="form-input" name="subject" type="text" placeholder="Subject of email..">
-                </div>
-                <div class="form-element">
-                    <label for="email">Email:</label>
-                    <input class="form-input" name="email" type="text" placeholder="Enter Your email..">
-                </div>
-                <div class="form-element">
-                    <label for="message">Message:</label>
-                    <textarea class="form-input" name="message" placeholder="Do the thing.."></textarea>
-                </div>
-
-                <input class="rounded-border" type="submit">
-            </form>
-        </div>
-
-        <div id="footer" class="section center">  
-            <ul class="socials center">
-                <li class="center"><a class="fa fa-facebook" href=""></a></li>
-                <li class="center"><a class="fa fa-youtube" href=""></a></li>
-                <li class="center"><a class="fa fa-twitter" href=""></a></li>
-                <li class="center"><a class="fa fa-instagram" href=""></a></li>
-            </ul>
-            <a href=""><p style="text-align: center;" class="center">Click HERE to veiw the source code for this website</p></a>       
-            <p class="center"><i class="fa fa-copyright"></i>Francis Peckover 2020. Website by SL</p>
-        </div>
     </body>
 </html>
