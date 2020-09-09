@@ -32,11 +32,13 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
                     numquam qui error hic ratione id. Culpa reiciendis et perferendis architecto. Quo!</p>
                 <div class="center">
-                    <button class="CTA-home" id="CTA-projects">Projects</button>
-                    <button class="CTA-home" id="CTA-contact">Contact</button>
+                    <button onclick="document.getElementById('contact').scrollIntoView();"  class="CTA-home">Contact</button>
+                    <button onclick="document.getElementById('projects').scrollIntoView();" class="CTA-home" id="CTA-projects">Projects</button>
                 </div>
             </div>
-            <img class="logo" style="grid-area: logo;" src="frontend/images/logo.png" alt="logo">
+            <div class="logo-div center" style="grid-area: logo;">
+                <img class="logo" src="frontend/images/logo.png" alt="logo">
+            </div>
         </div>
         
         <div id="about" class="seperator window center">

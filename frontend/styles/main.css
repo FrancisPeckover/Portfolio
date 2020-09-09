@@ -197,12 +197,12 @@ button:focus {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	background: none;
-	border: 1px solid --colour-five;
+	border: 1px solid var(--colour-five);
 	margin: 3%;
 	cursor: pointer;
 }
 
-#CTA-contact {
+#CTA-projects {
 	height: 1.5rem;
 	background: var(--colour-three);
 	color: var(--colour-one);
@@ -210,10 +210,9 @@ button:focus {
 
 .logo {
 	border-radius: 50%;
-	object-fit: cover;
 	max-width: 100%;
-	align-self: center;
-	justify-self: center;
+	position: relative;
+	object-fit: cover;
 }
 
 #about {
