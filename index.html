@@ -6,6 +6,8 @@
         <title>Amalgam</title>
 
         <link rel="stylesheet" href="frontend/styles/main.css">
+        <link rel="stylesheet" href="frontend/styles/responsive.css">
+        <link rel="stylesheet" href="frontend/styles/animations.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="frontend/images/logo.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
@@ -24,11 +26,20 @@
             <p class="center">Amalgam Designs</p>
         </div>
 
-        <div id="home" class="window center">
+        <div id="home" class="window">
+            <div style="grid-area: words;" class="home-words">
+                <h2>Form. Function. Amalgamated</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
+                    numquam qui error hic ratione id. Culpa reiciendis et perferendis architecto. Quo!</p>
+                <div class="center">
+                    <button class="CTA-home" id="CTA-projects">Projects</button>
+                    <button class="CTA-home" id="CTA-contact">Contact</button>
+                </div>
+            </div>
             <img class="logo" style="grid-area: logo;" src="frontend/images/logo.png" alt="logo">
         </div>
         
-        <div id="about" class="window center">
+        <div id="about" class="seperator window center">
             <p class="animated center about-text fill" style="grid-area: femaleText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Harum qui delectus ex perspiciatis veritatis iusto eos maiores eius eveniet recusandae eum rerum quae, sunt vero amet quos dolores neque 
                 suscipit molestias architecto culpa reprehenderit nam! Quibusdam, quod soluta accusamus, nemo voluptate quos atque excepturi obcaecati nobis 
@@ -43,7 +54,7 @@
             </p>
         </div>
 
-        <div id="projects" class="window center">
+        <div id="projects" class="seperator window center">
             <div class="animated center card">
                 <img src="frontend/images/logo.png" alt="Logo image atm">
                 <div class="center overlay">
@@ -67,7 +78,7 @@
             </div>
         </div>
 
-        <div id="contact" class="window column">
+        <div id="contact" class="seperator window column">
             <h2 style="margin-bottom: 5%;">Contact Us</h2>
             <form class="contact-form column" action="../backend/contact.php" method="post">
                 <input class="form-element" type="text" name="name" placeholder="Name" required>
@@ -78,20 +89,19 @@
             </form>
         </div>
 
-        <div class="footer">
-            <div style="grid-area: info;" class="column fill">
+        <div class="seperator footer">
+            <div style="grid-area: info;" class="info fill">
+                <h3>Contact</h3>
                 <p>fakeEmail@emailer.com</p>
                 <p>134 Fake Street</p>
                 <p>Fakesville</p>
                 <p>4812</p>
             </div>
-            <div style="grid-area: socials;" class="center fill">
-                <ul>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
-                    <a href=""><i class="fa fa-github"></i></a>
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                </ul>
+            <div style="grid-area: socials;" class="socials center fill">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-github"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
             </div>
             <p class="center" style="grid-area: copyright;"><i class="center fa fa-copyright"></i> Website by Amalgam 2020. All rights reserved</p>
         </div>

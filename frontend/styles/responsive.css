@@ -1,18 +1,34 @@
+@media screen and (max-width: 2560px) {
+}
+
+@media screen and (max-width: 1440px) {
+	.about-text {
+		font-size: 1.6rem;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	#projects {
 		flex-direction: column;
 	}
 
 	.logo {
-		height: auto;
-		max-width: 90vw;
 		object-fit: cover;
+	}
+
+	.avatar {
+		max-width: 60%;
 	}
 
 	#about {
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 2fr 1fr 2fr 1fr;
 		grid-template-areas: "maleImg" "maleText" "femaleImg" "femaleText";
+	}
+
+	.about-text {
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -23,7 +39,11 @@
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		background: var(--colour-secondary);
+		background: var(--colour-two);
+	}
+
+	#about {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
 	}
 
 	.nav-link {
@@ -33,10 +53,6 @@
 
 	.nav-link > p {
 		display: none;
-	}
-
-	.avatar {
-		max-width: 90vw;
 	}
 
 	.about-text {
@@ -49,5 +65,39 @@
 
 	.header {
 		display: block;
+		background: var(--colour-three);
+	}
+
+	.footer {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.about-text {
+		font-size: 1rem;
+	}
+
+	.card {
+		max-width: 75%;
+		max-height: 75%;
+	}
+
+	#home {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+		grid-template-areas: "logo" "words";
+	}
+
+	.home-words {
+		text-align: center;
+	}
+
+	#about {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+
+	.footer {
+		grid-template-columns: 1fr 1fr;
 	}
 }

@@ -11,8 +11,19 @@ document.addEventListener('scroll', interceptAnim);
 
 function interceptAnim() {
 	for (let i = 0; i < interceptAnims.length; i++) {
-		if (window.pageYOffset + window.innerHeight > interceptAnims[i].offsetTop + 300) {
+		if (window.pageYOffset + window.innerHeight * 0.5 > getYOffset(interceptAnims[i])) {
 			interceptAnims[i].style.webkitAnimationPlayState = 'running';
 		}
 	}
+}
+
+function getYOffset(element) {
+	var offset = 0;
+
+	while (element) {
+		offset += element.offsetTop;
+		element = element.offsetParent;
+	}
+
+	return offset;
 }
