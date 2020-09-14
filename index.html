@@ -6,34 +6,36 @@
         <title>Amalgam</title>
 
         <link rel="stylesheet" href="frontend/styles/main.css">
-        <link rel="stylesheet" href="frontend/styles/responsive.css">
         <link rel="stylesheet" href="frontend/styles/animations.css">
+        <link rel="stylesheet" href="frontend/styles/skills.css">
+        <link rel="stylesheet" href="frontend/styles/projects.css">
+        <link rel="stylesheet" href="frontend/styles/about.css">
+        <link rel="stylesheet" href="frontend/styles/contact.css">
+        <link rel="stylesheet" href="frontend/styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="frontend/images/logo.png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <script src="frontend/js/main.js"></script>
     </head>
     
     <body>
-        <ul id="nav" class="nav justify-end">
-            <a class="nav-link center" href="#home"><i class="fa fa-home"></i><p>Home</p></a>
-            <a class="nav-link center" href="#about"><i class="fa fa-info"></i><p>About</p></a>
-            <a class="nav-link center" href="#projects"><i class="fa fa-cogs"></i><p>Projects</p></a>
-            <a class="nav-link center" href="#contact"><i class="fa fa-envelope"></i><p>Contact</p></a>
-        </ul>
+        <header id="header" class="header">
+            <ul id="nav" class="nav">
+                <a class="nav-link center" href="#home"><i class="fa fa-home"></i><p>Home</p></a>
+                <a class="nav-link center" href="#about"><i class="fa fa-info"></i><p>About</p></a>
+                <a class="nav-link center" href="#projects"><i class="fa fa-cogs"></i><p>Projects</p></a>
+                <a class="contact-link rounded-border nav-link center" href="#contact"><i class="fa fa-envelope"></i><p>Contact</p></a>
+            </ul>
+        </header>
 
-        <div class="header center">
-            <p class="center">Amalgam Designs</p>
-        </div>
-
-        <div id="home" class="window">
-            <div style="grid-area: words;" class="home-words">
+        <div id="home" class="home window">
+            <div style="grid-area: words;" class="home-text-div">
                 <h2>Form. Function. Amalgamated</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
+                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
                     numquam qui error hic ratione id. Culpa reiciendis et perferendis architecto. Quo!</p>
-                <div class="center">
-                    <button onclick="document.getElementById('contact').scrollIntoView();"  class="CTA-home">Contact</button>
-                    <button onclick="document.getElementById('projects').scrollIntoView();" class="CTA-home" id="CTA-projects">Projects</button>
+                <div class="justify-end">
+                    <button onclick="document.getElementById('contact').scrollIntoView();"  class="call-to-action rounded-border">Contact</button>
+                    <button onclick="document.getElementById('projects').scrollIntoView();" class="call-to-action call-to-action-main rounded-border">Projects</button>
                 </div>
             </div>
             <div class="logo-div center" style="grid-area: logo;">
@@ -41,7 +43,10 @@
             </div>
         </div>
         
-        <div id="about" class="seperator window center">
+        <div id="about" class="about seperator window center">
+            <div class="section-title center">
+                <h1 class="center">About</h1>
+            </div>
             <p class="animated center about-text fill" style="grid-area: femaleText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Harum qui delectus ex perspiciatis veritatis iusto eos maiores eius eveniet recusandae eum rerum quae, sunt vero amet quos dolores neque 
                 suscipit molestias architecto culpa reprehenderit nam! Quibusdam, quod soluta accusamus, nemo voluptate quos atque excepturi obcaecati nobis 
@@ -56,37 +61,87 @@
             </p>
         </div>
 
-        <div id="projects" class="seperator window center">
+        <div id="projects" class="projects seperator window center">
+            <div class="section-title center">
+                <h1 class="center">Projects</h1>
+            </div>
             <div class="animated center card">
-                <img src="frontend/images/logo.png" alt="Logo image atm">
+                <img src="frontend/images/yahtzee.png" alt="Logo image atm">
                 <div class="center overlay">
                     <a href="#"><i class="fa fa-external-link"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="https://github.com/frankpeckover/Yahtzee" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
             </div>
             <div class="animated center card">
                 <img src="frontend/images/logo.png" alt="Logo image atm">
                 <div class="center overlay">
                     <a href="#"><i class="fa fa-external-link"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
             </div>
             <div class="animated center card">
                 <img src="frontend/images/logo.png" alt="Logo image atm">
                 <div class="center overlay">
                     <a href="#"><i class="fa fa-external-link"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
             </div>
         </div>
 
-        <div id="contact" class="seperator window column">
-            <h2 style="margin-bottom: 5%;">Contact Us</h2>
+        <div id="skills" class="skills window center seperator">
+            <div class="section-title center">
+                <h1 class="center">Skills</h1>
+            </div>
+
+            <div class="list column rounded-border">
+                <h3>Front-End</h3>
+                <p>Description of work</p>
+                <h4>Languages and libraries</h4>
+                <ul>
+                    <li>HTML 5</li>
+                    <li>CSS</li>
+                    <li>Vanilla JS</li>
+                    <li>Bootstrap</li>
+                    <li>React</li>
+                </ul>
+            </div>
+
+            <div class="list column rounded-border">
+                <h3>Back-End</h3>
+                <p>Description of skill</p>
+                <h4>Languages and libraries</h4>
+                <ul>
+                    <li>Node.JS</li>
+                    <li>MongoDB</li>
+                    <li>Express</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+
+            <div style="background: #c1b6c6;" class="list column rounded-border">
+                <h3>Design</h3>
+                <p>Description of work</p>
+                <h4>Languages and libraries</h4>
+                <ul>
+                    <li>Illustrator</li>
+                    <li>Hand-drawn</li>
+                    <li>Logo Design</li>
+                    <li>Website Layouts</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="contact" class="contact seperator window column">
+            <div class="section-title center">
+                <h1 class="center">Contact Us</h1>
+            </div>
+            <h2 style="margin-bottom: 5%;">Let us know what you're thinking</h2>
             <form class="contact-form column" action="../backend/contact.php" method="post">
                 <input class="form-element" type="text" name="name" placeholder="Name" required>
                 <input class="form-element" type="email" name="email" placeholder="Email" required>
                 <input class="form-element" type="text" name="subject" placeholder="Subject">
-                <textarea class="form-element" name="description" id="description" cols="30" rows="10" placeholder="Let us know what you're thinking" required></textarea>
+                <textarea style="height: 120px;" class="form-element" name="description" id="description" cols="30" rows="10" placeholder="Let us know what you're thinking" required></textarea>
                 <button type="submit" name="submit">Submit</button>
             </form>
         </div>
@@ -96,14 +151,13 @@
                 <h3>Contact</h3>
                 <p>fakeEmail@emailer.com</p>
                 <p>134 Fake Street</p>
-                <p>Fakesville</p>
-                <p>4812</p>
+                <p>Fakesville 4812</p>
             </div>
             <div style="grid-area: socials;" class="socials center fill">
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-instagram"></i></a>
-                <a href=""><i class="fa fa-github"></i></a>
-                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/frankpeckover" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
             </div>
             <p class="center" style="grid-area: copyright;"><i class="center fa fa-copyright"></i> Website by Amalgam 2020. All rights reserved</p>
         </div>

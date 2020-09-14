@@ -6,6 +6,8 @@
 	--colour-five: #000000;
 }
 
+/* Generic */
+
 ::-webkit-scrollbar {
 	width: 10px;
 }
@@ -26,7 +28,7 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	font-family: "Roboto", sans-serif;
 	overflow-x: hidden;
 }
 
@@ -121,34 +123,50 @@ button:focus {
 	color: var(--colour-five);
 }
 
+.rounded-border {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.section-title {
+	top: -4vh;
+	width: 20vw;
+	height: 8vh;
+	background: white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: absolute;
+	z-index: 11;
+	overflow: visible;
+}
+
 .header {
 	height: 5vh;
 	width: 100vw;
-	overflow: hidden;
 	top: 0;
 	z-index: 10;
 	font-size: 1.4rem;
 	position: fixed;
-	display: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	transition: opacity 1000ms;
 }
 
 .nav {
-	height: 5vh;
-	width: 100vw;
-	overflow: hidden;
 	font-size: 1.2rem;
-	position: fixed;
-	top: 0;
-	z-index: 10;
+	display: flex;
+	margin-right: 1rem;
+	overflow: hidden;
 }
 
 .nav-link {
 	padding: 0 3rem;
 	position: relative;
-}
-
-.nav-link:hover {
-	animation: shake 500ms infinite;
 }
 
 .nav-link::after {
@@ -166,46 +184,81 @@ button:focus {
 }
 
 .nav-link > i {
-	padding: 0 0.5rem;
+	display: none;
+}
+
+.contact-link {
+	border: var(--colour-two) 1px solid;
+	position: relative;
+	padding: 0 3rem;
+	position: relative;
+}
+
+.contact-link::after {
+	display: none;
+}
+
+.contact-link:hover::before {
+	width: 100%;
+}
+
+.contact-link::before {
+	content: "";
+	background: var(--colour-two);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	width: 0;
+	left: 0;
+	height: 100%;
+	transition: width 500ms;
+	position: absolute;
+	z-index: -1;
 }
 
 .window {
 	min-height: 95vh;
 	width: 100vw;
-	padding: 0 5%;
+	padding: 10vh 5%;
 	margin-bottom: 5%;
 }
 
-#home {
+.home {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	grid-template-areas: "words logo";
 }
 
-.home-words {
+.home-text-div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: right;
 }
 
-.CTA-home {
-	width: 45%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+.home-text {
+	padding-left: 40%;
+}
+
+.call-to-action {
+	width: 30%;
 	background: none;
 	border: 1px solid var(--colour-five);
 	margin: 3%;
 	cursor: pointer;
 }
 
-#CTA-projects {
+.call-to-action-main {
 	height: 1.5rem;
 	background: var(--colour-three);
 	color: var(--colour-one);
+	position: relative;
+}
+
+.call-to-action-main:hover {
+	background: var(--colour-two);
 }
 
 .logo {
@@ -215,63 +268,9 @@ button:focus {
 	object-fit: cover;
 }
 
-#about {
-	overflow: hidden;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	column-gap: 1%;
-	grid-template-areas: "femaleText maleImg" "femaleImg maleText";
-}
-
-#about > p:nth-child(1) {
-	animation: slideFromLeft 1000ms forwards;
-}
-
-#about > p:nth-child(4) {
-	animation: slideFromRight 1000ms forwards;
-}
-
-.avatar {
-	border-radius: 50%;
-	object-fit: cover;
-	max-width: 75%;
-	align-self: center;
-	justify-self: center;
-	animation: fadeIn forwards 4000ms;
-}
-
-.about-text {
-	padding: 10%;
-	text-align: center;
-	font-size: 1.8rem;
-}
-
-.contact-form {
-	width: 50vw;
-	max-width: 90vw;
-}
-
-.form-element {
-	width: 100%;
-	height: 30px;
-	resize: vertical;
-	border: none;
-	border-bottom: 1px solid var(--colour-five);
-	margin-bottom: 2vh;
-}
-
-.contact-form > button {
-	width: 100%;
-}
-
-.form-element:focus {
-	outline: none;
-}
-
 .footer {
 	position: relative;
-	min-height: 25vh;
+	min-height: 35vh;
 	max-width: 100vw;
 	display: grid;
 	grid-template-columns: 1fr 3fr;
@@ -280,6 +279,7 @@ button:focus {
 	padding: 5%;
 	column-gap: 5%;
 	row-gap: 5%;
+	background: var(--colour-two);
 }
 
 .seperator {

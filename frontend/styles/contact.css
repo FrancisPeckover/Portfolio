@@ -1,0 +1,29 @@
+.contact {
+	overflow: visible;
+}
+
+.contact > .section-title:nth-child(1) {
+	right: 15vw;
+}
+
+.contact-form {
+	width: 50vw;
+	max-width: 90vw;
+}
+
+.form-element {
+	width: 100%;
+	height: 30px;
+	resize: vertical;
+	border: none;
+	border-bottom: 1px solid var(--colour-five);
+	margin-bottom: 2vh;
+}
+
+.contact-form > button {
+	width: 100%;
+}
+
+.form-element:focus {
+	outline: none;
+}

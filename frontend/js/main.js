@@ -1,10 +1,13 @@
 let interceptAnims;
+let prevOffset = window.pageYOffset;
 
 document.addEventListener('DOMContentLoaded', () => {
 	interceptAnims = document.getElementsByClassName('animated');
-	pauseAnimations();
+	pauseAnimations(interceptAnims);
 	configureLinks();
 });
+
+document.addEventListener('scroll', hideHeader);
 
 document.addEventListener('scroll', () => {
 	for (let i = 0; i < interceptAnims.length; i++) {
@@ -14,9 +17,9 @@ document.addEventListener('scroll', () => {
 	}
 });
 
-function pauseAnimations() {
-	for (let i = 0; i < interceptAnims.length; i++) {
-		interceptAnims[i].style.webkitAnimationPlayState = 'paused';
+function pauseAnimations(elements) {
+	for (let i = 0; i < elements.length; i++) {
+		elements[i].style.webkitAnimationPlayState = 'paused';
 	}
 }
 
@@ -50,5 +53,24 @@ function configureLinks() {
 			event.preventDefault();
 			document.getElementById(scrollers[i].getAttribute('href').split('#')[1]).scrollIntoView();
 		};
+	}
+}
+
+function scrollDirection() {
+	if (window.pageYOffset > prevOffset) {
+		prevOffset = window.pageYOffset;
+		return -1;
+	} else {
+		prevOffset = window.pageYOffset;
+		return 1;
+	}
+}
+
+function hideHeader() {
+	let header = document.getElementById('header');
+	if (scrollDirection() === -1) {
+		header.style.opacity = '0';
+	} else {
+		header.style.opacity = '1';
 	}
 }
