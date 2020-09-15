@@ -19,7 +19,9 @@
     </head>
     
     <body>
+        <!-- #region header-->
         <header id="header" class="header">
+            <h2>Amalgam</h2>
             <ul id="nav" class="nav">
                 <a class="nav-link center" href="#home"><i class="fa fa-home"></i><p>Home</p></a>
                 <a class="nav-link center" href="#about"><i class="fa fa-info"></i><p>About</p></a>
@@ -28,10 +30,13 @@
             </ul>
         </header>
 
+        <!-- #endregion -->
+
+        <!-- #region home-->
         <div id="home" class="home window">
             <div style="grid-area: words;" class="home-text-div">
-                <h2>Form. Function. Amalgamated</h2>
-                <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
+                <h2 style="animation: slideFromLeft 1500ms forwards;">Form. Function. Amalgamated</h2>
+                <p class="home-text" style="opacity: 0; animation: fadeIn 2000ms forwards 500ms;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
                     numquam qui error hic ratione id. Culpa reiciendis et perferendis architecto. Quo!</p>
                 <div class="justify-end">
                     <button onclick="document.getElementById('contact').scrollIntoView();"  class="call-to-action rounded-border">Contact</button>
@@ -42,110 +47,126 @@
                 <img class="logo" src="frontend/images/logo.png" alt="logo">
             </div>
         </div>
-        
+        <!-- #endregion -->
+
+        <!-- #region projects-->
+        <div id="projects" class="projects seperator window center">
+            <div class="section-title center">
+                <h1 class="center">Projects</h1>
+            </div>
+            
+            <div class="animated project rounded-border column">
+                <div class="project-text column rounded-border">
+                    <h2>Yahtzee</h2>
+                    <h3>Description</h3>
+                    <p>This is the desription of the project.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, facilis?</p>
+                </div>
+                <div class="project-img">
+                    <img class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
+                    <div class="overlay rounded-border center">
+                        <a class="center" href="#" target="_blank"><i class="fa fa-link"></i></a>
+                        <a class="center" href="#" target="_blank"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-text rounded-border column">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node</li>
+                        <li>Express</li>
+                        <li>JavaScript</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="animated project rounded-border column">
+                <div class="project-text column rounded-border">
+                    <h2>Overland Offshore</h2>
+                    <h3>Description</h3>
+                    <p>This is the desription of the project.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, facilis?</p>
+                </div>
+                <div class="project-img">
+                    <img class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
+                    <div class="overlay rounded-border center">
+                        <a class="center" href="#" target="_blank"><i class="fa fa-link"></i></a>
+                        <a class="center" href="#" target="_blank"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-text rounded-border column">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node</li>
+                        <li>Express</li>
+                        <li>JavaScript</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="animated project rounded-border column">
+                <div class="project-text column rounded-border">
+                    <h2>Sorting Algorithms</h2>
+                    <h3>Description</h3>
+                    <p>This is the desription of the project.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, facilis?</p>
+                </div>
+                <div class="project-img">
+                    <img class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
+                    <div class="overlay rounded-border center">
+                        <a class="center" href="#" target="_blank"><i class="fa fa-link"></i></a>
+                        <a class="center" href="#" target="_blank"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-text rounded-border column">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node</li>
+                        <li>Express</li>
+                        <li>JavaScript</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region about-->
         <div id="about" class="about seperator window center">
             <div class="section-title center">
                 <h1 class="center">About</h1>
             </div>
-            <p class="animated center about-text fill" style="grid-area: femaleText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <p class="animated center about-text fill rounded-border" style="grid-area: femaleText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Harum qui delectus ex perspiciatis veritatis iusto eos maiores eius eveniet recusandae eum rerum quae, sunt vero amet quos dolores neque 
                 suscipit molestias architecto culpa reprehenderit nam! Quibusdam, quod soluta accusamus, nemo voluptate quos atque excepturi obcaecati nobis 
                 quas vel. Iure, totam!
             </p>
             <img id='boyImg' class="animated avatar" style="grid-area: maleImg;" src="frontend/images/female-avatar.png" alt="boy">
             <img id="girlImg" class="animated avatar" style="grid-area: femaleImg;" src="frontend/images/female-avatar.png" alt="girl">
-            <p class="animated center about-text fill" style="grid-area: maleText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati laborum soluta quia magni 
+            <p class="animated center about-text fill rounded-border" style="grid-area: maleText;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati laborum soluta quia magni 
                 esse, quasi inventore, vitae quo aspernatur provident unde porro. Ab consectetur fugiat, perferendis laudantium vel molestiae aliquam 
                 praesentium quod earum veritatis illum dignissimos suscipit dolore enim tenetur illo exercitationem obcaecati expedita eligendi accusamus 
                 architecto necessitatibus! Perferendis.
             </p>
         </div>
+        <!--#endregion-->
 
-        <div id="projects" class="projects seperator window center">
-            <div class="section-title center">
-                <h1 class="center">Projects</h1>
-            </div>
-            <div class="animated center card">
-                <img src="frontend/images/yahtzee.png" alt="Logo image atm">
-                <div class="center overlay">
-                    <a href="#"><i class="fa fa-external-link"></i></a>
-                    <a href="https://github.com/frankpeckover/Yahtzee" target="_blank"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-            <div class="animated center card">
-                <img src="frontend/images/logo.png" alt="Logo image atm">
-                <div class="center overlay">
-                    <a href="#"><i class="fa fa-external-link"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-            <div class="animated center card">
-                <img src="frontend/images/logo.png" alt="Logo image atm">
-                <div class="center overlay">
-                    <a href="#"><i class="fa fa-external-link"></i></a>
-                    <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div id="skills" class="skills window center seperator">
-            <div class="section-title center">
-                <h1 class="center">Skills</h1>
-            </div>
-
-            <div class="list column rounded-border">
-                <h3>Front-End</h3>
-                <p>Description of work</p>
-                <h4>Languages and libraries</h4>
-                <ul>
-                    <li>HTML 5</li>
-                    <li>CSS</li>
-                    <li>Vanilla JS</li>
-                    <li>Bootstrap</li>
-                    <li>React</li>
-                </ul>
-            </div>
-
-            <div class="list column rounded-border">
-                <h3>Back-End</h3>
-                <p>Description of skill</p>
-                <h4>Languages and libraries</h4>
-                <ul>
-                    <li>Node.JS</li>
-                    <li>MongoDB</li>
-                    <li>Express</li>
-                    <li>PHP</li>
-                </ul>
-            </div>
-
-            <div style="background: #c1b6c6;" class="list column rounded-border">
-                <h3>Design</h3>
-                <p>Description of work</p>
-                <h4>Languages and libraries</h4>
-                <ul>
-                    <li>Illustrator</li>
-                    <li>Hand-drawn</li>
-                    <li>Logo Design</li>
-                    <li>Website Layouts</li>
-                </ul>
-            </div>
-
-        </div>
-
+        <!-- #region contact-->
         <div id="contact" class="contact seperator window column">
             <div class="section-title center">
                 <h1 class="center">Contact Us</h1>
             </div>
-            <h2 style="margin-bottom: 5%;">Let us know what you're thinking</h2>
-            <form class="contact-form column" action="../backend/contact.php" method="post">
+            <h2 class="animated" style="animation: grow 500ms forwards; margin-bottom: 5%;">Let us know what you're thinking</h2>
+            <form class="animated contact-form column" action="../backend/contact.php" method="post">
                 <input class="form-element" type="text" name="name" placeholder="Name" required>
                 <input class="form-element" type="email" name="email" placeholder="Email" required>
                 <input class="form-element" type="text" name="subject" placeholder="Subject">
                 <textarea style="height: 120px;" class="form-element" name="description" id="description" cols="30" rows="10" placeholder="Let us know what you're thinking" required></textarea>
-                <button type="submit" name="submit">Submit</button>
+                <button class="submit" type="submit" name="submit">Submit</button>
             </form>
         </div>
+        <!-- #endregion -->
 
+        <!-- #region footer-->
         <div class="seperator footer">
             <div style="grid-area: info;" class="info fill">
                 <h3>Contact</h3>
@@ -161,6 +182,7 @@
             </div>
             <p class="center" style="grid-area: copyright;"><i class="center fa fa-copyright"></i> Website by Amalgam 2020. All rights reserved</p>
         </div>
+        <!-- #endregion -->
 
     </body>
 </html>
