@@ -7,7 +7,6 @@
 
         <link rel="stylesheet" href="frontend/styles/main.css">
         <link rel="stylesheet" href="frontend/styles/animations.css">
-        <link rel="stylesheet" href="frontend/styles/skills.css">
         <link rel="stylesheet" href="frontend/styles/projects.css">
         <link rel="stylesheet" href="frontend/styles/about.css">
         <link rel="stylesheet" href="frontend/styles/contact.css">
@@ -36,8 +35,7 @@
         <div id="home" class="home window">
             <div style="grid-area: words;" class="home-text-div">
                 <h2 style="animation: slideFromLeft 1500ms forwards;">Form. Function. Amalgamated</h2>
-                <p class="home-text" style="opacity: 0; animation: fadeIn 2000ms forwards 500ms;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sit possimus minus excepturi, 
-                    numquam qui error hic ratione id. Culpa reiciendis et perferendis architecto. Quo!</p>
+                <p class="home-text" style="opacity: 0; animation: fadeIn 2000ms forwards 500ms;">Amalgam is a software development team specialising in web development, bringing together the technical and design worlds in a sophisticated way. Two opposites, Amalgamated!</p>
                 <div class="justify-end">
                     <button onclick="document.getElementById('contact').scrollIntoView();"  class="call-to-action rounded-border">Contact</button>
                     <button onclick="document.getElementById('projects').scrollIntoView();" class="call-to-action call-to-action-main rounded-border">Projects</button>
@@ -59,13 +57,13 @@
                 <div class="project-text column rounded-border">
                     <h2>Yahtzee</h2>
                     <h3>Description</h3>
-                    <p>This is the desription of the project.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, facilis?</p>
+                    <p>A simple score sheet for the dice game, Yahtzee</p>
                 </div>
                 <div class="project-img">
-                    <img class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
+                    <img style="border: 1px solid black" class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
                     <div class="overlay rounded-border center">
-                        <a class="center" href="#" target="_blank"><i class="fa fa-link"></i></a>
-                        <a class="center" href="#" target="_blank"><i class="fa fa-github"></i></a>
+                        <a class="center" href="https://yahtzeescoresheet.herokuapp.com/" target="_blank"><i class="fa fa-link"></i></a>
+                        <a class="center" href="https://github.com/frankpeckover/Yahtzee" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-text rounded-border column">
@@ -75,7 +73,6 @@
                         <li>Node</li>
                         <li>Express</li>
                         <li>JavaScript</li>
-                        <li>Illustrator</li>
                     </ul>
                 </div>
             </div>
@@ -83,21 +80,20 @@
                 <div class="project-text column rounded-border">
                     <h2>Overland Offshore</h2>
                     <h3>Description</h3>
-                    <p>This is the desription of the project.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, facilis?</p>
+                    <p>A blog site for an upcoming adventure company</p>
                 </div>
                 <div class="project-img">
-                    <img class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
+                    <img style="border: 1px solid black" class="fill rounded-border" src="frontend/images/overlandoffshore.png" alt="Image of the project">
                     <div class="overlay rounded-border center">
-                        <a class="center" href="#" target="_blank"><i class="fa fa-link"></i></a>
-                        <a class="center" href="#" target="_blank"><i class="fa fa-github"></i></a>
+                        <a class="center" href="https://overlandoffshore.herokuapp.com/" target="_blank"><i class="fa fa-link"></i></a>
+                        <a class="center" href="https://github.com/frankpeckover/OverlandOffshore" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-text rounded-border column">
                     <h3>Technologies</h3>
                     <ul>
-                        <li>React</li>
-                        <li>Node</li>
-                        <li>Express</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
                         <li>JavaScript</li>
                         <li>Illustrator</li>
                     </ul>
@@ -105,25 +101,24 @@
             </div>
             <div class="animated project rounded-border column">
                 <div class="project-text column rounded-border">
-                    <h2>Sorting Algorithms</h2>
+                    <h2>Sorting and Searching</h2>
                     <h3>Description</h3>
-                    <p>This is the desription of the project.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, facilis?</p>
+                    <p>A basic visualisation of common searching and sorting algorithms</p>
                 </div>
                 <div class="project-img">
-                    <img class="fill rounded-border" src="frontend/images/yahtzee.png" alt="Image of the project">
+                    <img style="border: 1px solid black" class="fill rounded-border" src="frontend/images/sorting.gif" alt="Image of the project">
                     <div class="overlay rounded-border center">
-                        <a class="center" href="#" target="_blank"><i class="fa fa-link"></i></a>
-                        <a class="center" href="#" target="_blank"><i class="fa fa-github"></i></a>
+                        <a class="center" href="https://sortingandsearching.herokuapp.com/" target="_blank"><i class="fa fa-link"></i></a>
+                        <a class="center" href="https://github.com/frankpeckover/Sorting" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-text rounded-border column">
                     <h3>Technologies</h3>
                     <ul>
-                        <li>React</li>
-                        <li>Node</li>
-                        <li>Express</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
                         <li>JavaScript</li>
-                        <li>Illustrator</li>
+                        <li>Algorithms</li>
                     </ul>
                 </div>
             </div>
@@ -170,9 +165,8 @@
         <div class="seperator footer">
             <div style="grid-area: info;" class="info fill">
                 <h3>Contact</h3>
-                <p>fakeEmail@emailer.com</p>
-                <p>134 Fake Street</p>
-                <p>Fakesville 4812</p>
+                <p>peckover.francis@outlook.com</p>
+                <p>Townsville 4812</p>
             </div>
             <div style="grid-area: socials;" class="socials center fill">
                 <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>

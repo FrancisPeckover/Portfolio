@@ -2,13 +2,14 @@
     
     if(isset($_POST['submit'])) {
         $name = $_POST['name'];
-        $email = $_POST['email'];
+        $emailFrom = $_POST['email'];
         $subject = $_POST['subject'];
-        $description = $_POST['description'];
+        $message = $_POST['description'];
 
         $mailTo = "francis6797@outlook.com";
-        $header = "From: ".$email;
+        $header = "From: ".$emailFrom;
 
-        mail($mailTo, $subject, $description, $header);
+        mail($mailTo, $subject, $message, $header);
+        header("Location: index.php?mailsend");
     }
 ?>
